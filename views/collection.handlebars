@@ -1,0 +1,11 @@
+<section class="container">
+  <h3 class="card-name">{{card.name}}</h3>
+  <h4>Flashcard Selections Below {{}}</h4>
+  <section class="flex-row justify-center">
+    {{#each gallery.paintings as |painting|}}
+    {{> painting-details}}
+    {{/each}}
+  </section>
+</section>
+
+{{!-- will have to go and change handlebar syntax to work with what we created --}}

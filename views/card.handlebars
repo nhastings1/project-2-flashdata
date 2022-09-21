@@ -1,0 +1,14 @@
+<section class="card">
+    {{!-- we could use this image as a new library to put in top corner of each card created? --}}
+    <img src="/images/{{painting.filename}}" alt="{{painting.description}}">
+    <div class="card-details">
+        <h3>Topic: {{card.title}}</h3>
+
+        <p>Question: {{}}</p>
+        <p>Answer: {{}}</p>
+
+        <p>Date Flashcard was Created: {{ format_date painting.exhibition_date}}</p>
+    </div>
+</section>
+
+{{!-- will have to go and change handlebar syntax to work with what we created --}}
