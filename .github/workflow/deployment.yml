@@ -17,16 +17,4 @@ jobs:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: ${{ secrets.HEROKU_APP_NAME }} # Must be unique in Heroku (e.g. 'project2-boilerplate')
           heroku_email: ${{ secrets.HEROKU_ACCOUNT_EMAIL }} # Must be the email used to sign into Heroku (e.g. 'test@email.com')
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
+
