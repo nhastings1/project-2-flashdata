@@ -16,13 +16,13 @@ const seedDatabase = async () => {
   console.info('Users Seeded:', users);
 
   const cards = await Card.bulkCreate(cardData, {
-    individualHooks: true,
+    // individualHooks: true,
     returning: true,
   });
   console.info('Cards Seeded:', cards);
 
   const collections = await Collection.bulkCreate(collectionData, {
-    individualHooks: true,
+    // individualHooks: true,
     returning: true,
   });
 

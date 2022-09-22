@@ -22,7 +22,6 @@ Collection.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-
   },
   {
     sequelize,

@@ -20,6 +20,8 @@ router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
+    console.log('Here');
+
     if (!userData) {
       res
         .status(400)
@@ -42,7 +44,6 @@ router.post('/login', async (req, res) => {
       // CHANGE THIS REDIRECT TO WHERE YOU WANT THE USER TO GO
       res.status(200).redirect('/logged_in_homepage');
     });
-
   } catch (err) {
     res.status(400).json(err);
   }

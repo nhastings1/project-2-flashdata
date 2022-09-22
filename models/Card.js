@@ -7,7 +7,7 @@ class Card extends Model {
   }
 }
 
-Cards.init(
+Card.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -20,14 +20,13 @@ Cards.init(
       allowNull: false,
     },
     answer: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     collection_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
-
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
   {
     sequelize,
