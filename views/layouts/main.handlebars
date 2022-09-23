@@ -1,31 +1,31 @@
-<html lang='en'>
+<html lang="en">
 
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 2 Boilerplate</title>
-    <link rel='stylesheet' href='/public/assets/css/reset.css' />
-    <link rel='stylesheet' href='/public/assets/css/style.css' />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
 
   <body>
-    <div class='flex-column justify-space-around'>
-      <header class='display-flex justify-space-between align-center p-2'>
+    <div class="flex-column justify-space-around">
+      <header class="display-flex justify-space-between align-center p-2">
         <h1>
-          <a href='/'>Project 2 Example</a>
+          <a href="/">Project 2 Example</a>
         </h1>
         <nav>
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
-            <a href='/'>Homepage</a>
+            <a href="/">Homepage</a>
             |
-            <button class='no-button' id='logout'>Log out</button>
+            <button class="no-button" id="logout">Log out</button>
           {{else}}
-            <a href='/login'>Log in</a>
+            <a href="/login">Log in</a>
           {{/if}}
         </nav>
       </header>
-      <main class='container container-fluid mt-5'>
+      <main class="container container-fluid mt-5">
         <!-- Render the sub layout -->
         {{{body}}}
       </main>
@@ -36,7 +36,11 @@
 
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
+<<<<<<< HEAD
       <script src='/js/logout.js'></script>
+=======
+      <script src="./assets/js/logout.js"></script>
+>>>>>>> origin/dev
     {{/if}}
   </body>
 
