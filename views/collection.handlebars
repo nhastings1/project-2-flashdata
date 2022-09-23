@@ -1,6 +1,6 @@
 <section class="container">
-  <h3 class="card-name">{{card.name}}</h3>
-  <h4>Flashcard Selections Below {{}}</h4>
+  <h3 class="card-name">{{collection.name}}</h3>
+  <h4>Flashcard Selections Below {{collection.name}}</h4>
   <section class="flex-row justify-center">
     {{#each gallery.paintings as |painting|}}
     {{> painting-details}}
