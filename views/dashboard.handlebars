@@ -1,6 +1,8 @@
 <h2>Your dashboard</h2>
 <p>Welcome {{name}}</p>
 <p>Viewing all flashcards</p>
+<div class="columns">
+  <div class="column is-one-third">
 {{#each collections as |collection| }}
 <div class="row mb-4 project">
   <div class="col-md-5">
@@ -10,6 +12,8 @@
   </div>
 </div>
 {{/each}}
+</div>
+<div class="column is-two-thirds">
 <!-- Loop over each object in the projects array -->
 {{#each cards as |card| }}
 <div class="row mb-4 project">
@@ -24,6 +28,9 @@
     {{!-- <p>Created by {{card.name}} on {{format_date card.date_created}}</p> --}}
   </div>
 </div>
-{{/each}}
 
+{{/each}}
 <a href="/new-card">Creat a New Flash Card</a>
+</div>
+</div>
+
