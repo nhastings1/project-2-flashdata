@@ -1,5 +1,11 @@
 [
     {
-      "name": "state capitals"
+        "name": "state capitals"
+    },
+    {
+        "name": "periodic table"
+    },
+    {
+        "name": "history dates"
     }
 ]

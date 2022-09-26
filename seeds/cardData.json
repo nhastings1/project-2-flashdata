@@ -1,8 +1,74 @@
 [
     {
-      "name": "state capitals",
-      "question": "what is the capital of missouri",
-      "answer": "jefferson",
-      "collection_id": 1
+        "name": "state capitals",
+        "question": "what is the capital of missouri",
+        "answer": "jefferson",
+        "collection_id": 1
+    },
+    {
+        "name": "state capitals",
+        "question": "what is the capital of kansas",
+        "answer": "topeka",
+        "collection_id": 1
+    },
+    {
+        "name": "state capitals",
+        "question": "what is the capital of colorado",
+        "answer": "denver",
+        "collection_id": 1
+    },
+    {
+        "name": "state capitals",
+        "question": "what is the capital of texas",
+        "answer": "austin",
+        "collection_id": 1
+    },
+    {
+        "name": "periodic table",
+        "question": "what is the name for N on the periodic table",
+        "answer": "nitrogen",
+        "collection_id": 2
+    },
+    {
+        "name": "periodic table",
+        "question": "what is the name for C on the periodic table",
+        "answer": "carbon",
+        "collection_id": 2
+    },
+    {
+        "name": "periodic table",
+        "question": "what is the name for O on the periodic table",
+        "answer": "oxygen",
+        "collection_id": 2
+    },
+    {
+        "name": "periodic table",
+        "question": "what is the name for Zn on the periodic table",
+        "answer": "zinc",
+        "collection_id": 2
+    },
+    {
+        "name": "history dates",
+        "question": "what year did america gain its independence from great britain",
+        "answer": "1776",
+        "collection_id": 3
+    },
+    {
+        "name": "history dates",
+        "question": "what year did the civil war start",
+        "answer": "1861",
+        "collection_id": 3
+    },
+    {
+        "name": "history dates",
+        "question": "what year was the first president elected",
+        "answer": "1789",
+        "collection_id": 3
+    },
+    {
+        "name": "history dates",
+        "question": "what year did world war II being ",
+        "answer": "1939",
+        "collection_id": 3
     }
 ]
