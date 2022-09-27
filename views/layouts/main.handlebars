@@ -22,9 +22,7 @@
         </h1>
         <nav class='navbar has-background-link'>
           <ul class='navbar-start'>
-            <li class='navbar-item'>
-              <a class='has-text-white' href='/'>Home</a>
-            </li>
+         
             <li class='navbar-item'>
               <a class='has-text-white' href='/dashboard'>Dashboard</a>
             </li>
@@ -39,19 +37,6 @@
               </li>
             {{/if}}
           </ul>
-        <h1>
-          <a href='/'>Project 2 Example</a>
-        </h1>
-        <nav>
-          <!-- Conditionally render login or logout links -->
-          {{#if logged_in}}
-            <a href='/'>Homepage</a>
-            |
-            <button class='no-button' id='logout'>Log out</button>
-          {{else}}
-            <a href='/login'>Log in</a>
-          {{/if}}
-        </nav>
       </header>
       <main class='container container-fluid mt-5'>
         <!-- Render the sub layout -->
@@ -64,7 +49,7 @@
 
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
-      <script src='./assets/js/logout.js'></script>
+      <script src='/assets/js/logout.js'></script>
     {{/if}}
   </body>
 

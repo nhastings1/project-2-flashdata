@@ -1,12 +1,20 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { Card, Collection } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
+  console.log();
   try {
     // Change this to where you app should go
     // console.log(req.session.logged_in);
-    res.render('homepage', {
+    const cardData = await Card.findAll({
+      order: [['id', 'ASC']],
+      where: { id: req.id },
+    });
+    const cards = cardData.map((project) => project.get({ plain: true }));
+    console.log('cards:', cards);
+    res.render('flashcards', {
+      cards,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -14,14 +22,60 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/dashboard', withAuth, (req, res) => {
-  res.render('dashboard', {
-    logged_in: req.session.logged_in,
-  });
+router.get('/dashboard', withAuth, async (req, res) => {
+  console.log('i am here');
+  try {
+    const collectionsData = await Collection.findAll({
+      order: [['name', 'ASC']],
+    });
+    const collections = collectionsData.map((project) =>
+      project.get({ plain: true })
+    );
+    console.log('hello', collections);
+    res.render('dashboard', {
+      collections,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
-router.get('/new-card', withAuth, (req, res) => {
-  res.render('new-card', {
+router.get('/cards/:id', withAuth, async (req, res) => {
+  try {
+    const cardData = await Card.findAll({
+      order: [['id', 'ASC']],
+      where: { collection_id: req.params.id },
+    });
+    const cards = cardData.map((project) => project.get({ plain: true }));
+    res.render('flashcards', {
+      cards,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/new-card', withAuth, async (req, res) => {
+  try {
+    const collectionsData = await Collection.findAll({
+      order: [['name', 'ASC']],
+    });
+    const collections = collectionsData.map((project) =>
+      project.get({ plain: true })
+    );
+    res.render('new-card', {
+      collections,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/new-collection', withAuth, (req, res) => {
+  res.render('new-collection', {
     logged_in: req.session.logged_in,
   });
 });
@@ -35,5 +89,4 @@ router.get('/login', (req, res) => {
   }
   res.render('login');
 });
-
 module.exports = router;
