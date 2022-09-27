@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Card extends Model {
-  getCards(collection) {
-    //return bcrypt.compareSync(loginPw, this.password);
-  }
+  // getCards(collection) {
+  //return bcrypt.compareSync(loginPw, this.password);
+  // }
 }
 
 Card.init(
@@ -26,6 +26,11 @@ Card.init(
     collection_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'collection',
+        key: 'id',
+      },
     },
   },
   {
