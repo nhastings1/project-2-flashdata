@@ -2,12 +2,12 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Collection extends Model {
-  getCollection(name) {
-    //return bcrypt.compareSync(loginPw, this.password);
-  }
-  getCollections() {
-    //return bcrypt.compareSync(loginPw, this.password);
-  }
+  // getCollection(name) {
+  //return bcrypt.compareSync(loginPw, this.password);
+  // }
+  // getCollections() {
+  //return bcrypt.compareSync(loginPw, this.password);
+  // }
 }
 
 Collection.init(

@@ -1,17 +1,15 @@
-<h2>Homepage</h2>
 <p>Viewing all flashcards</p>
 <!-- Loop over each object in the projects array -->
-{{#each cards as |card| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <a href="/card/{{card.id}}">{{card.name}}</a>
-    </h2>
-    <p>
-      {{card.description}}
-    </p>
-    </p>
-    <p>Created by {{card.name}} on {{format_date card.date_created}}</p>
+{{#each cards as |card|}}
+  <div class='m-4 p-4 has-background-success'>
+    <div class=''>
+      <h2>
+        <p>Collection ID number: {{card.collection_id}}</p>
+      </h2>
+      <p>Question:
+        {{card.question}}
+      </p>
+      <p>Answer: {{card.answer}}</p>
+    </div>
   </div>
-</div>
 {{/each}}
