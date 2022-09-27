@@ -15,7 +15,11 @@
 - [Questions](#questions)
 
 ## Installation
-💾 1.Clone repository on to your machine. 2.Navigate to the terminal and verify your file path is correct. 3.In the terminal run command "npm install" to download the packages. 4.Then run the command node index.js to run the app. 5.Your prompts will be initiated and your app begin to run. 
+💾   1.Clone repository on to your machine.
+     2.Navigate to the terminal and verify your file path is correct.
+     3.In the terminal run command "npm install" to download the packages.
+     4.Then run the command node server.js to run the app. 
+     5.Your prompts will be initiated and your app begin to run. 
 
 ## Usage
 💻 AS A student i want to be able to login and be able to create, update, view, and delete the flashcards. This application will allow a user to create, study, and store flashcards based on their studies.
@@ -40,7 +44,6 @@ This application is covered by the MIT license.
 [jordanb366](https://github.com/jordanb366)
 [brad1200](https://github.com/brad1200)<br />
 <br />
-✉️ Email me with any questions: nickh.code@gmail.com<br /><br />
 
 
 
