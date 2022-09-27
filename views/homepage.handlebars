@@ -9,7 +9,10 @@
       <p>Question:
         {{card.question}}
       </p>
-      <p>Answer: {{card.answer}}</p>
+      <button class='toggle-btn button is-success'>Reveal Answer</button>
+      <p class='show-hide'>Answer: {{card.answer}}</p>
     </div>
   </div>
 {{/each}}
+
+<script src='./assets/js/showHide.js'></script>
