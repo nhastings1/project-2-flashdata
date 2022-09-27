@@ -1,0 +1,21 @@
+<div class='col-md-12'>
+  <p>Viewing all flashcards</p>
+  <!-- Loop over each object in the projects array -->
+
+  {{#each cards as |card|}}
+    <div class='m-4 p-4 has-background-success'>
+      <div class=''>
+        <h2>
+          <p>Collection ID number: {{card.collection_id}}</p>
+        </h2>
+        <p>Question:
+          {{card.question}}
+        </p>
+        <button class='toggle-btn button is-success'>Reveal Answer</button>
+        <p class='show-hide'>Answer: {{card.answer}}</p>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+<script src='./assets/js/showHide.js'></script>
