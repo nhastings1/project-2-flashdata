@@ -1,11 +1,16 @@
 function showHide() {
-  const showHide = document.querySelectorAll('show-hide');
+  // console.log('test');
+  for (let i = 0; i < toggleBtn.length; i++) {
+    const showHide = document.getElementsByClassName('show-hide')[i];
 
-  if (showHide.style.display === 'none') {
-    showHide.style.display = 'block';
-  } else {
-    showHide.style.display = 'none';
+    if (showHide.style.display === 'none') {
+      showHide.style.display = 'block';
+    } else {
+      showHide.style.display = 'none';
+    }
   }
 }
-
-document.querySelectorAll('toggle-btn').addEventListener('click', showHide);
+var toggleBtn = document.querySelectorAll('.toggle-btn');
+for (let i = 0; i < toggleBtn.length; i++) {
+  toggleBtn[i].addEventListener('click', showHide);
+}
