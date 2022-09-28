@@ -3,4 +3,19 @@
   <p>Viewing all Collections:</p>
 </div>
 
+{{#each collections as |collection|}}
+  <div class='m-4 p-4 has-background-success'>
+    <div class=''>
+      <h2>
+        Collection ID number:
+        {{collection.id}}
+      </h2>
+      <h3>
+        Collection Name:
+        {{collection.name}}
+      </h3>
+    </div>
+  </div>
+{{/each}}
+
 <a href='/new-card'>Creat a New Flash Card</a>
