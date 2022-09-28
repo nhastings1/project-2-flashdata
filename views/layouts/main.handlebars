@@ -4,32 +4,31 @@
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Memorize: A Flashcard Creation App</title>
-    <link rel='stylesheet' href='./assets/css/reset.css' />
-    <link rel='stylesheet' href='./assets/css/style.css' />
+    <link rel='stylesheet' href='/assets/css/reset.css' />
+    <link rel='stylesheet' href='/assets/css/style.css' />
     <link
       rel='stylesheet'
       href='https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css'
     />
+    <script src="https://kit.fontawesome.com/fc6bf164a8.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <div class='flex-column justify-space-around'>
+    <div class="container"><div class='flex-column justify-space-around'>
       <header class='display-flex justify-space-between align-center p-2'>
         <h1 class='navbar-brand is-size-2'>
           <a href='/'>Memorize: A Flashcard Creation App</a>
         </h1>
         <nav class='navbar has-background-link'>
           <ul class='navbar-start'>
-           <li class='navbar-item'>
-              <a class='has-text-white' href='/'>Home</a>
-            </li>
             <li class='navbar-item'>
-              <a class='has-text-white' href='/dashboard'>Dashboard</a>
+              <a class='has-text-white' href='/dashboard'>Home</a>
             </li>
             <!-- Conditionally render login or logout links -->
             {{#if logged_in}}
-              <li>
-                <button class='button is-info is-small' id='logout'>Log out</button>
+              <li class="navbar-item">
+                <a class='has-text-white' href='#' id="logout">Log out</a>
+                {{!-- <button class='button is-info is-small' id='logout'>Log out</button> --}}
               </li>
             {{else}}
               <li class='navbar-item'>
@@ -51,6 +50,7 @@
     {{#if logged_in}}
       <script src='/assets/js/logout.js'></script>
     {{/if}}
+    </div>
   </body>
 
 </html>
