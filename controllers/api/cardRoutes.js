@@ -15,12 +15,11 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.delete('/api/cards/:id', withAuth, async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const deleteCard = await Collection_id.destroy({
+    const deleteCard = await Card.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
       },
     });
 

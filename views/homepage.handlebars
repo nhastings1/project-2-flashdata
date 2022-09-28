@@ -1,18 +1,25 @@
 <p>Viewing all flashcards</p>
 <!-- Loop over each object in the projects array -->
 {{#each cards as |card|}}
-<div class='m-4 p-4 has-background-success destroy-card'>
-  <div class=''>
-    <h2>
-      <p>Collection ID number: {{card.collection_id}}</p>
-    </h2>
-    <p>Question:
-      {{card.question}}
-    </p>
-    <p>Answer: {{card.answer}}</p>
-    <p>
-      <button class="destroy" type="button" name="button" data-id="{{card.collection_id}}">Delete card</button>
-    </p>
+  <div class='m-4 p-4 has-background-success destroy-card'>
+    <div class=''>
+      <h2>
+        <p>Collection ID number: {{card.collection_id}}</p>
+      </h2>
+      <p>Question:
+        {{card.question}}
+      </p>
+      <p>Answer: {{card.answer}}</p>
+      <p>
+        <button
+          class='destroy'
+          type='button'
+          name='button'
+          data-id='{{card.id}}'
+        >Delete card</button>
+      </p>
+    </div>
   </div>
-</div>
 {{/each}}
+
+<script src='./assets/js/deleteBtn.js'></script>
