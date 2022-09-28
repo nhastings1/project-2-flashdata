@@ -2,21 +2,5 @@
   <h2 class='is-size-2 mb-2'>Welcome to your dashboard</h2>
   <p>Viewing all Collections:</p>
 </div>
-<!-- Loop over each object in the projects array -->
-{{#each collections as |collection|}}
-  <div class='m-4 p-4 has-background-success'>
-    <p>
-      Name:
-      {{collection.name}}
-    </p>
-    <p>Collection ID:
-      {{collection.id}}
-    </p>
-    {{!-- <p>Created by {{card.name}} on {{format_date card.date_created}}</p> --}}
-  </div>
-{{/each}}
-
 
 <a href='/new-card'>Creat a New Flash Card</a>
-
-
