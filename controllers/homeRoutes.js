@@ -9,7 +9,7 @@ router.get('/', withAuth, async (req, res) => {
     // console.log(req.session.logged_in);
     const cardData = await Card.findAll({
       order: [['id', 'ASC']],
-      where: { id: req.id },
+      // where: { id: req.id },
     });
     const cards = cardData.map((project) => project.get({ plain: true }));
     console.log('cards:', cards);
