@@ -3,19 +3,34 @@
   <p>Viewing all Collections:</p>
 </div>
 
-{{#each collections as |collection|}}
-  <div class='m-4 p-4 has-background-success'>
-    <div class=''>
-      <h2>
-        Collection ID number:
-        {{collection.id}}
-      </h2>
-      <h3>
-        Collection Name:
-        {{collection.name}}
-      </h3>
+<div class='dropdown'>
+  <div class='dropdown-trigger'>
+    <button class='button' aria-haspopup='true' aria-controls='dropdown-menu'>
+      <span>Collections</span>
+      <span class='icon is-small'>
+        <i class='fa fa-angle-down' aria-hidden='true'></i>
+      </span>
+    </button>
+  </div>
+  <div class='dropdown-menu' id='dropdown-menu' role='menu'>
+    <div class='dropdown-content'>
+      {{#each collections as |collection|}}
+        <p>ID: {{collection.id}}</p>
+        <a href='/cards/{{collection.id}}' class='dropdown-item'>Name:
+          {{collection.name}}</a>
+      {{/each}}
     </div>
   </div>
-{{/each}}
 
-<a href='/new-card'>Creat a New Flash Card</a>
+</div>
+<div>
+  <a href='/new-collection'>Create a New Flash Card Collection</a>
+</div>
+<div>
+  <a href='/new-card'>Create a New Flash Card</a>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () { var dropdown =
+  document.querySelector('.dropdown'); dropdown.addEventListener('click',
+  function(event) { dropdown.classList.toggle('is-active'); }); });
+</script>
