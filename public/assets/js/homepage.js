@@ -2,7 +2,7 @@ const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
         const id = event.target.getAttribute('data-id');
 
-        const response = await fetch(`/api/projects/${id}`, {
+        const response = await fetch(`/${id}`, {
             method: 'DELETE',
         });
 
@@ -15,5 +15,5 @@ const delButtonHandler = async (event) => {
 };
 
 document
-    .querySelector('.project-list')
+    .querySelector('.destroy-card')
     .addEventListener('click', delButtonHandler);

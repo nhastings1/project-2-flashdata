@@ -1,7 +1,7 @@
 <p>Viewing all flashcards</p>
 <!-- Loop over each object in the projects array -->
 {{#each cards as |card|}}
-<div class='m-4 p-4 has-background-success'>
+<div class='m-4 p-4 has-background-success destroy-card'>
   <div class=''>
     <h2>
       <p>Collection ID number: {{card.collection_id}}</p>
@@ -11,7 +11,7 @@
     </p>
     <p>Answer: {{card.answer}}</p>
     <p>
-      <button class="destroy-card" type="button" name="button" data-id="{{card.id}}">Delete card</button>
+      <button class="destroy" type="button" name="button" data-id="{{card.collection_id}}">Delete card</button>
     </p>
   </div>
 </div>
