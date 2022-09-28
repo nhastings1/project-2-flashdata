@@ -2,3 +2,17 @@
   display: none;
   color: red;
 } */
+
+body {
+  background-color: lightgrey;
+}
+
+.carousel {
+  overflow: hidden;
+}
+
+.card {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-bottom: 1.5rem;
+}

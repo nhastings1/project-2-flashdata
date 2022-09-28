@@ -1,8 +1,9 @@
-{{#each cards as |card|}}
-  <div class='columns is-centered'>
-    <div class='column is-half is-centered'>
-      <center>
-        <div class='card'>
+<!-- Start Carousel -->
+<div class='columns'>
+  <div class='column is-full'>
+    <div id='carousel' class='carousel'>
+      {{#each cards as |card|}}
+        <div class='card item-{{@index}}'>
           <div class='card-content'>
             <p class='title'>
               {{card.question}}
@@ -15,13 +16,22 @@
               Answer:
               {{card.answer}}
             </p>
-
           </div>
         </div>
-      </center>
+      {{/each}}
     </div>
   </div>
-  <br />
-{{/each}}
-
-<script src='/assets/js/showHide.js'></script>
+</div>
+<!-- End Carousel -->
+<script
+  src='https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js'
+></script>
+<script>
+  bulmaCarousel.attach('#carousel', {
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    loop: true,
+    pagination: false
+	});
+</script>
+<script src='/assets/js/showHide.js'>

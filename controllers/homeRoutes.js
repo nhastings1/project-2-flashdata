@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Card, Collection } = require('../models');
 const withAuth = require('../utils/auth');
+var _ = require('lodash');
 
 router.get('/', (req, res) => {
   // If the user is already logged in, redirect the request to another route
@@ -37,7 +38,8 @@ router.get('/cards/:id', withAuth, async (req, res) => {
       order: [['id', 'ASC']],
       where: { collection_id: req.params.id },
     });
-    const cards = cardData.map((project) => project.get({ plain: true }));
+    let cards = cardData.map((project) => project.get({ plain: true }));
+    cards = _.shuffle(cards);
     res.render('flashcards', {
       cards,
       logged_in: req.session.logged_in,
