@@ -1,3 +1,4 @@
+{{!-- creating the dashboard page --}}
 <div class='columns is-centered'>
   <div class='column is-half'>
     <div class='p-2'>
@@ -12,28 +13,19 @@
     <center>
       <div class='dropdown is-hoverable'>
         <div class='dropdown-trigger'>
-          <button
-            class='button'
-            style='width:400px;'
-            aria-haspopup='true'
-            aria-controls='dropdown-menu'
-          >
+          <button class='button' style='width:400px;' aria-haspopup='true' aria-controls='dropdown-menu'>
             <span>Collections</span>
             <span class='icon is-small'>
               <i class='fa fa-angle-down' aria-hidden='true'></i>
             </span>
           </button>
         </div>
-        <div
-          class='dropdown-menu'
-          style='width:400px;'
-          id='dropdown-menu'
-          role='menu'
-        >
+        <div class='dropdown-menu' style='width:400px;' id='dropdown-menu' role='menu'>
+          {{!-- drop down selection of collections made to chose from --}}
           <div class='dropdown-content'>
             {{#each collections as |collection|}}
-              <a href='/cards/{{collection.id}}' class='dropdown-item'>
-                {{collection.name}}</a>
+            <a href='/cards/{{collection.id}}' class='dropdown-item'>
+              {{collection.name}}</a>
             {{/each}}
           </div>
         </div>
@@ -41,21 +33,19 @@
       </div>
 
       <div style='margin: 5px;'>
-        <a href='/new-collection'><i
-            class='fa-solid fa-layer-group fa-xl'
-          ></i>Add a new collection</a>
+        <a href='/new-collection'><i class='fa-solid fa-layer-group fa-xl'></i>Add a new collection</a>
       </div>
       <div style='margin: 5px;'>
-        <a href='/new-card' title='Add a new card'><i
-            class='fa-solid fa-plus fa-xl'
-          ></i>Add a new card</a>
+        <a href='/new-card' title='Add a new card'><i class='fa-solid fa-plus fa-xl'></i>Add a new card</a>
       </div>
     </center>
   </div>
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () { var dropdown =
-  document.querySelector('.dropdown'); dropdown.addEventListener('click',
-  function(event) { dropdown.classList.toggle('is-active'); }); });
+  document.addEventListener('DOMContentLoaded', function () {
+    var dropdown =
+      document.querySelector('.dropdown'); dropdown.addEventListener('click',
+        function (event) { dropdown.classList.toggle('is-active'); });
+  });
 </script>

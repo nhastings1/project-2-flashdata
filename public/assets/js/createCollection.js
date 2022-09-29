@@ -1,6 +1,7 @@
 const newCollectionHandler = async (event) => {
   event.preventDefault();
 
+  // grabbing from new-collection.handlebars page to make javascript changes
   const collection = document.querySelector('#collection').value.trim();
 
   if (collection) {

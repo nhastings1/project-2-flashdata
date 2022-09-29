@@ -3,6 +3,7 @@ const { Card } = require('../../models');
 
 const withAuth = require('../../utils/auth');
 
+// getting the post to create a new card
 router.post('/', async (req, res) => {
   try {
     const newCard = await Card.create({
