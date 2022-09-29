@@ -1,22 +1,33 @@
-<div class='col-md-12'>
-  <a href='/new-collection'>Creat a New Collection</a>
-  <p>Viewing all flashcards</p>
-  <!-- Loop over each object in the projects array -->
-
-  {{#each cards as |card|}}
-    <div class='m-4 p-4 has-background-success'>
-      <div class=''>
-        <h2>
-          <p>Collection ID number: {{card.collection_id}}</p>
-        </h2>
-        <p>Question:
-          {{card.question}}
-        </p>
-        <button class='toggle-btn button is-success'>Reveal Answer</button>
-        <p class='show-hide'>Answer: {{card.answer}}</p>
+<!-- Start Carousel -->
+<div class='columns'>
+  <div class='column is-full'>
+    <div id='carousel' class='carousel'>
+      {{#each cards as |card|}}
+      <div class='card item-{{@index}}'>
+        <div class='card-content'>
+          <p class='title'>
+            {{card.question}}
+          </p>
+          {{!-- toggles to reval the answer to each card --}}
+          <button class='toggle-btn button is-success' onclick='showHide({{card.id}})'>Reveal Answer</button>
+          <p class='subtitle' id='{{card.id}}' style='visibility: hidden;'>
+            Answer:
+            {{card.answer}}
+          </p>
+        </div>
       </div>
+      {{/each}}
     </div>
-  {{/each}}
+  </div>
 </div>
-
-<script src='./assets/js/showHide.js'></script>
+<!-- End Carousel -->
+<script src='https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js'></script>
+<script>
+  bulmaCarousel.attach('#carousel', {
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    loop: true,
+    pagination: false
+  });
+</script>
+<script src='/assets/js/showHide.js'>

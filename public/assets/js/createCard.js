@@ -1,6 +1,7 @@
 const newCardHandler = async (event) => {
   event.preventDefault();
 
+  // grabbing from new-card.handlebars page to make javascript changes 
   const question = document.querySelector('#question').value.trim();
   const answer = document.querySelector('#answer').value.trim();
   const collection_id = document.querySelector('#id').value.trim();

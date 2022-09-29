@@ -7,6 +7,7 @@ const Collection = require('./Collection');
 //   onDelete: 'CASCADE',
 // });
 
+// bringing in relations to each other
 Collection.hasMany(Card, {
   foreignKey: 'collection_id',
   onDelete: 'CASCADE',

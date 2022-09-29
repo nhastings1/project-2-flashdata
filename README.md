@@ -45,5 +45,13 @@ This application is covered by the MIT license.
 [brad1200](https://github.com/brad1200)<br />
 <br />
 
+## Screenshots
+![Screenshot1](./public/assets/img/Screenshot1.png)
+![Screenshot2](./public/assets/img/Screenshot2.png)
+
+## Link to deployed application
+
+[Deployed application Link](https://nameless-hamlet-43462.herokuapp.com/)
+
 
 

@@ -7,6 +7,7 @@ class Card extends Model {
   // }
 }
 
+// creating the elements of the card model
 Card.init(
   {
     id: {
