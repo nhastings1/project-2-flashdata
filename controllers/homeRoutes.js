@@ -13,6 +13,7 @@ router.get('/', (req, res) => {
   res.render('login');
 });
 
+// getting all dashboard data, collections, new cards
 router.get('/dashboard', withAuth, async (req, res) => {
   console.log('i am here');
   try {
@@ -32,6 +33,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
   }
 });
 
+// getting specific card with id
 router.get('/cards/:id', withAuth, async (req, res) => {
   try {
     const cardData = await Card.findAll({
@@ -49,6 +51,7 @@ router.get('/cards/:id', withAuth, async (req, res) => {
   }
 });
 
+// getting new card
 router.get('/new-card', withAuth, async (req, res) => {
   try {
     const collectionsData = await Collection.findAll({

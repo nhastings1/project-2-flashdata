@@ -3,6 +3,7 @@ const { Collection } = require('../../models');
 
 const withAuth = require('../../utils/auth');
 
+// getting the post to create a new collection
 router.post('/', async (req, res) => {
   try {
     const newCollection = await Collection.create({

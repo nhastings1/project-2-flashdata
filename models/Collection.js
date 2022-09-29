@@ -10,6 +10,7 @@ class Collection extends Model {
   // }
 }
 
+// creating the elements of the collection model
 Collection.init(
   {
     id: {
